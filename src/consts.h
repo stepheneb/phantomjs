@@ -55,6 +55,7 @@
 #define PAGE_SETTINGS_LOAD_PLUGINS          "loadPlugins"
 #define PAGE_SETTINGS_JS_ENABLED            "javascriptEnabled"
 #define PAGE_SETTINGS_XSS_AUDITING          "XSSAuditingEnabled"
+#define PAGE_SETTINGS_JAVA_ENABLED          "javaEnabled"
 #define PAGE_SETTINGS_USER_AGENT            "userAgent"
 #define PAGE_SETTINGS_LOCAL_ACCESS_REMOTE   "localToRemoteUrlAccessEnabled"
 #define PAGE_SETTINGS_USERNAME              "userName"

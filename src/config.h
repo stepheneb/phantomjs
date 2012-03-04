@@ -80,6 +80,9 @@ public:
     bool pluginsEnabled() const;
     void setPluginsEnabled(const bool value);
 
+    bool javaEnabled() const;
+    void setJavaEnabled(const bool value);
+
     QString proxyType() const;
     void setProxyType(const QString value);
 
@@ -130,6 +133,7 @@ private:
     bool m_localToRemoteUrlAccessEnabled;
     QString m_outputEncoding;
     bool m_pluginsEnabled;
+    bool m_javaEnabled;
     QString m_proxyType;
     QString m_proxyHost;
     int m_proxyPort;

@@ -82,6 +82,14 @@ void Config::processArgs(const QStringList &args)
             setPluginsEnabled(false);
             continue;
         }
+        if (arg == "--enable-java=yes") {
+            setJavaEnabled(true);
+            continue;
+        }
+        if (arg == "--enable-java=no") {
+            setJavaEnabled(false);
+            continue;
+        }
         if (arg == "--disk-cache=yes") {
             setDiskCacheEnabled(true);
             continue;
@@ -280,6 +288,16 @@ void Config::setPluginsEnabled(const bool value)
     m_pluginsEnabled = value;
 }
 
+bool Config::javaEnabled() const
+{
+    return m_javaEnabled;
+}
+
+void Config::setJavaEnabled(const bool value)
+{
+    m_javaEnabled = value;
+}
+
 QString Config::proxyType() const
 {
     return m_proxyType;
@@ -423,6 +441,7 @@ void Config::resetToDefaults()
     m_localToRemoteUrlAccessEnabled = false;
     m_outputEncoding = "UTF-8";
     m_pluginsEnabled = false;
+    m_javaEnabled = false;
     m_proxyType = "http";
     m_proxyHost.clear();
     m_proxyPort = 1080;
